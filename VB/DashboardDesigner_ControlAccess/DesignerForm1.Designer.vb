@@ -26,8 +26,8 @@
 			Me.components = New System.ComponentModel.Container()
 			Me.dashboardBarAndDockingController1 = New DevExpress.DashboardWin.Native.DashboardBarAndDockingController(Me.components)
 			Me.dashboardDesigner = New DevExpress.DashboardWin.DashboardDesigner()
-			CType(Me.dashboardBarAndDockingController1, System.ComponentModel.ISupportInitialize).BeginInit()
-			CType(Me.dashboardDesigner, System.ComponentModel.ISupportInitialize).BeginInit()
+			DirectCast(Me.dashboardBarAndDockingController1, System.ComponentModel.ISupportInitialize).BeginInit()
+			DirectCast(Me.dashboardDesigner, System.ComponentModel.ISupportInitialize).BeginInit()
 			Me.SuspendLayout()
 			' 
 			' dashboardBarAndDockingController1
@@ -68,8 +68,8 @@
 			Me.Controls.Add(Me.dashboardDesigner)
 			Me.Name = "DesignerForm1"
 			Me.Text = "Dashboard Designer"
-			CType(Me.dashboardBarAndDockingController1, System.ComponentModel.ISupportInitialize).EndInit()
-			CType(Me.dashboardDesigner, System.ComponentModel.ISupportInitialize).EndInit()
+			DirectCast(Me.dashboardBarAndDockingController1, System.ComponentModel.ISupportInitialize).EndInit()
+			DirectCast(Me.dashboardDesigner, System.ComponentModel.ISupportInitialize).EndInit()
 			Me.ResumeLayout(False)
 
 		End Sub

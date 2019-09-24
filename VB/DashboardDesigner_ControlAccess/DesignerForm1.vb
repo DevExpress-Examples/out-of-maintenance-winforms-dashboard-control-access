@@ -22,8 +22,11 @@ Namespace DashboardDesigner_ControlAccess
 		End Sub
 
 		Private Sub PivotGridControl_CustomCellValue(ByVal sender As Object, ByVal e As PivotCellValueEventArgs)
-			If e.Value IsNot Nothing AndAlso CDbl(e.Value) < 200000 Then
-				e.Value = 0
+			If e.RowField Is Nothing Then
+				Return
+			End If
+			If e.GetFieldValue(e.RowField).ToString().Contains("Mountain") Then
+				e.Value = "###"
 			End If
 		End Sub
 

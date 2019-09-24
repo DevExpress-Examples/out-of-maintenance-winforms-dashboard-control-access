@@ -21,8 +21,9 @@ namespace DashboardDesigner_ControlAccess
         }
 
         private void PivotGridControl_CustomCellValue(object sender, PivotCellValueEventArgs e) {
-            if(e.Value != null && (double)e.Value < 200000)
-                e.Value = 0;
+            if (e.RowField == null) return;
+            if (e.GetFieldValue(e.RowField).ToString().Contains("Mountain"))
+                e.Value = "###";
         }
 
         private void dashboardDesigner_DashboardItemControlUpdated(object sender, DevExpress.DashboardWin.DashboardItemControlEventArgs e) {
