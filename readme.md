@@ -4,14 +4,13 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-*Files to look at*:
-
-* [DesignerForm1.cs](./CS/DashboardDesigner_ControlAccess/DesignerForm1.cs) (VB: [DesignerForm1.vb](./VB/DashboardDesigner_ControlAccess/DesignerForm1.vb))
-
-# How to Access the Underlying Controls of the Dashboard Items
-
+# Dashboard for WinForms - How to Access the Underlying Controls of the Dashboard Items
 
 This example demonstrates how to customize the controls used to visualize data in the dashboard items at runtime.
+
+## Files to Look At
+
+* [DesignerForm1.cs](./CS/DashboardDesigner_ControlAccess/DesignerForm1.cs) (VB: [DesignerForm1.vb](./VB/DashboardDesigner_ControlAccess/DesignerForm1.vb))
 
 The following options are changed:
 
@@ -21,6 +20,6 @@ The following options are changed:
 
 ![screenshot](/images/screenshot.png)
 
-**See also:**
+## Documentation
 
-- [Access to Underlying Controls](https://docs.devexpress.com/Dashboard/401095/)
+* [Access to Underlying Controls](https://docs.devexpress.com/Dashboard/401095/)
