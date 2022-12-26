@@ -47,6 +47,7 @@
         </GridMeasureColumn>
       </GridColumns>
       <GridOptions ColumnWidthMode="Manual" />
+      <ColumnFilterOptions />
     </Grid>
     <Chart ComponentName="chartDashboardItem1" Name="Chart 1" ShowCaption="false" DataSource="dashboardExcelDataSource1">
       <DataItems>
@@ -84,13 +85,36 @@
         <Value DefaultId="DataItem0" />
       </Values>
     </Pivot>
+    <Gauge ComponentName="gaugeDashboardItem1" Name="Gauges 1" ShowCaption="false" DataSource="dashboardExcelDataSource1">
+      <DataItems>
+        <Measure DataMember="RevenueQTD (Sum)" DefaultId="DataItem0" />
+        <Measure DataMember="RevenueQTDTarget (Sum)" DefaultId="DataItem1" />
+        <Measure DataMember="UnitsSoldYTD (Sum)" DefaultId="DataItem2" />
+        <Measure DataMember="UnitsSoldYTDTarget (Sum)" DefaultId="DataItem3" />
+      </DataItems>
+      <GaugeElement Name="RevenueQTD">
+        <ActualValue DefaultId="DataItem0" />
+        <TargetValue DefaultId="DataItem1" />
+        <AbsoluteVariationNumericFormat />
+        <PercentVariationNumericFormat />
+        <PercentOfTargetNumericFormat />
+      </GaugeElement>
+      <GaugeElement Name="UnitsSoldYTD">
+        <ActualValue DefaultId="DataItem2" />
+        <TargetValue DefaultId="DataItem3" />
+        <AbsoluteVariationNumericFormat />
+        <PercentVariationNumericFormat />
+        <PercentOfTargetNumericFormat />
+      </GaugeElement>
+    </Gauge>
   </Items>
   <LayoutTree>
-    <LayoutGroup>
-      <LayoutItem DashboardItem="gridDashboardItem1" Weight="30.846484935437591" />
-      <LayoutGroup Orientation="Vertical" Weight="69.153515064562413">
-        <LayoutItem DashboardItem="chartDashboardItem1" Weight="50.100603621730386" />
-        <LayoutItem DashboardItem="pivotDashboardItem1" Weight="49.899396378269614" />
+    <LayoutGroup Weight="100">
+      <LayoutItem DashboardItem="gridDashboardItem1" Weight="27.043390514631685" />
+      <LayoutItem DashboardItem="gaugeDashboardItem1" Weight="27.749747729566096" />
+      <LayoutGroup Orientation="Vertical" Weight="45.206861755802223">
+        <LayoutItem DashboardItem="chartDashboardItem1" Weight="50" />
+        <LayoutItem DashboardItem="pivotDashboardItem1" Weight="50" />
       </LayoutGroup>
     </LayoutGroup>
   </LayoutTree>
