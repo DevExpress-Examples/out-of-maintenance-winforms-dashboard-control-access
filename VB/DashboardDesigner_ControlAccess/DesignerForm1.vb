@@ -43,7 +43,7 @@ Namespace DashboardDesigner_ControlAccess
                 Dim gridView As GridView = TryCast(e.GridControl.MainView, GridView)
                 gridView.Appearance.Row.Font = New Font("Arial", 10)
             End If
-            ' For all Pivot items in the dashboard:
+            ' For a specific Chart item in the dashboard:
             If e.DashboardItemName = "chartDashboardItem1" Then
                 Dim chartControl As ChartControl = e.ChartControl
                 CType(chartControl.Diagram, XYDiagram).Panes(0).BackColor = Color.LightYellow
