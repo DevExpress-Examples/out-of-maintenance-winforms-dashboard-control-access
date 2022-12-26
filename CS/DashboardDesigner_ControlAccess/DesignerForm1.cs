@@ -16,6 +16,7 @@ namespace DashboardDesigner_ControlAccess
         }
 
         private void dashboardDesigner_DashboardItemControlCreated(object sender, DevExpress.DashboardWin.DashboardItemControlEventArgs e) {
+            // For all Pivot items in the dashboard:
             if (e.PivotGridControl != null) {
                 PivotGridControl pivotGridControl = e.PivotGridControl;
                 pivotGridControl.CustomCellValue += PivotGridControl_CustomCellValue; ;
@@ -29,14 +30,17 @@ namespace DashboardDesigner_ControlAccess
         }
 
         private void dashboardDesigner_DashboardItemControlUpdated(object sender, DevExpress.DashboardWin.DashboardItemControlEventArgs e) {
+            // For all Grid items in the dashboard:
             if(e.GridControl!= null) {
                 GridView gridView = e.GridControl.MainView as GridView;
                 gridView.Appearance.Row.Font = new Font("Arial", 10);
             }
+            // For a specific Chart item in the dashboard:
             if(e.DashboardItemName == "chartDashboardItem1") {
                 ChartControl chartControl = e.ChartControl;
                 ((XYDiagram)chartControl.Diagram).Panes[0].BackColor = Color.LightYellow;
             }
+            // For a specific Gauge item in the dashboard:
             if (e.DashboardItemName == "gaugeDashboardItem1") {
                 var gauge = e.GaugeControl.Gauges[0] as CircularGauge;
                 gauge.Labels[0].AppearanceBackground.ContentBrush = new SolidBrushObject(Color.LightGreen);
